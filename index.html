@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sliding Block Journey</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="effects_layer" class="effects_layer" aria-hidden="true">
+		<canvas id="effects_canvas" class="effects_canvas"></canvas>
+	</div>
+	<main class="game">
+		<header class="game_header">
+			<p class="eyebrow">progressive sliding puzzle</p>
+			<h1>Sliding Block Journey</h1>
+			<p>
+				Flick blocks directly into the empty space and guide the orange
+				block to the visible green goal.
+			</p>
+		</header>
+
+		<section class="game_information" aria-label="Game information">
+			<div class="game_stat">
+				<span>Level</span>
+				<strong id="level_number">1</strong>
+			</div>
+
+			<div class="game_stat">
+				<span>Grid</span>
+				<strong id="board_size_text">4 × 4</strong>
+			</div>
+
+			<div class="game_stat">
+				<span>Moves</span>
+				<strong id="move_count">0</strong>
+			</div>
+
+			<div class="game_stat flow_stat">
+				<span>Flow</span>
+				<strong id="flow_count">×1</strong>
+			</div>
+
+			<div class="game_actions">
+				<button id="restart_button" type="button">New Map</button>
+				<button id="sound_button" class="sound_button" type="button" aria-pressed="true" aria-label="Turn sound off">Sound On</button>
+			</div>
+		</section>
+
+
+		<section id="board_frame" class="board_frame">
+			<div class="board_aura" aria-hidden="true"></div>
+			<section
+				id="board"
+				class="board"
+				aria-label="Sliding block board"
+			></section>
+		</section>
+
+
+		<div id="level_banner" class="level_banner" aria-hidden="true">
+			<span id="level_banner_kicker">LEVEL</span>
+			<strong id="level_banner_text">1</strong>
+		</div>
+
+		<div id="toast_layer" class="toast_layer" aria-hidden="true"></div>
+
+		<p id="status_message" class="status_message" aria-live="polite">
+			Flick a block toward the empty space.
+		</p>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
